@@ -1,0 +1,2087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Teacher's Day, Ate ♥</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* =========================================================
+           ROOT
+        ========================================================= */
+
+        :root {
+            --black: #111111;
+            --white: #fffdf5;
+            --yellow: #ffe600;
+            --pink: #ff4fa3;
+            --blue: #45b7ff;
+            --mint: #73f6c2;
+            --orange: #ff8a3d;
+            --purple: #b28cff;
+            --paper: #f5f0df;
+
+            --border: 4px solid var(--black);
+            --shadow: 8px 8px 0 var(--black);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--white);
+            color: var(--black);
+            font-family: "Space Grotesk", sans-serif;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button,
+        input,
+        textarea {
+            font: inherit;
+        }
+
+        ::selection {
+            background: var(--pink);
+            color: var(--black);
+        }
+
+
+        /* =========================================================
+           GLOBAL
+        ========================================================= */
+
+        .container {
+            width: min(1180px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 110px 0;
+            position: relative;
+        }
+
+        .section-label {
+            display: inline-block;
+            background: var(--black);
+            color: var(--white);
+            padding: 8px 14px;
+            font-family: "DM Mono", monospace;
+            font-size: 13px;
+            letter-spacing: 1px;
+            margin-bottom: 22px;
+            box-shadow: 5px 5px 0 var(--pink);
+        }
+
+        .section-title {
+            font-size: clamp(42px, 7vw, 92px);
+            line-height: 0.9;
+            letter-spacing: -4px;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 35px;
+        }
+
+        .section-title .pink {
+            color: var(--pink);
+        }
+
+        .section-title .blue {
+            color: var(--blue);
+        }
+
+        .section-title .yellow {
+            color: var(--yellow);
+            -webkit-text-stroke: 3px var(--black);
+        }
+
+        .section-title .mint {
+            color: var(--mint);
+            -webkit-text-stroke: 3px var(--black);
+        }
+
+
+        /* =========================================================
+           SCROLL COUNTER
+        ========================================================= */
+
+        .scroll-counter {
+            position: fixed;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 100;
+            background: var(--black);
+            color: var(--white);
+            padding: 10px 8px;
+            font-family: "DM Mono", monospace;
+            font-size: 12px;
+            writing-mode: vertical-rl;
+            border: 2px solid var(--black);
+        }
+
+
+        /* =========================================================
+           HERO / OPENING
+        ========================================================= */
+
+        .opening {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 20% 20%, rgba(255, 230, 0, 0.45), transparent 25%),
+                radial-gradient(circle at 85% 75%, rgba(255, 79, 163, 0.25), transparent 30%),
+                var(--white);
+        }
+
+        .opening::before {
+            content: "";
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            background: var(--pink);
+            border: var(--border);
+            right: 8%;
+            top: 12%;
+            transform: rotate(12deg);
+            box-shadow: var(--shadow);
+        }
+
+        .opening::after {
+            content: "";
+            position: absolute;
+            width: 130px;
+            height: 130px;
+            background: var(--blue);
+            border: var(--border);
+            left: 5%;
+            bottom: 10%;
+            transform: rotate(-15deg);
+            box-shadow: 7px 7px 0 var(--black);
+        }
+
+        .opening-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1050px;
+        }
+
+        .opening-small {
+            font-family: "DM Mono", monospace;
+            font-size: 15px;
+            margin-bottom: 25px;
+        }
+
+        .opening-title {
+            font-size: clamp(62px, 12vw, 150px);
+            line-height: 0.8;
+            letter-spacing: -8px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .opening-title span {
+            display: block;
+        }
+
+        .opening-title .pink {
+            color: var(--pink);
+        }
+
+        .opening-title .blue {
+            color: var(--blue);
+        }
+
+        .scroll-cue {
+            margin-top: 70px;
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: var(--yellow);
+            border: var(--border);
+            box-shadow: var(--shadow);
+            padding: 15px 20px;
+            font-weight: 700;
+            animation: bounce 1.6s infinite;
+        }
+
+        .scroll-arrow {
+            font-size: 24px;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(8px);
+            }
+        }
+
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .hero {
+            background: var(--yellow);
+            border-top: var(--border);
+            border-bottom: var(--border);
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 0.9fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-heading {
+            font-size: clamp(55px, 8vw, 110px);
+            line-height: 0.88;
+            letter-spacing: -5px;
+            text-transform: uppercase;
+        }
+
+        .hero-heading .pink {
+            color: var(--pink);
+        }
+
+        .hero-heading .blue {
+            color: var(--blue);
+        }
+
+        .hero-text {
+            font-size: 20px;
+            line-height: 1.6;
+            max-width: 550px;
+            margin-top: 30px;
+        }
+
+        .hero-photo-wrapper {
+            position: relative;
+            transform: rotate(3deg);
+        }
+
+        .hero-photo-wrapper::before {
+            content: "";
+            position: absolute;
+            inset: 15px -15px -15px 15px;
+            background: var(--pink);
+            border: var(--border);
+            z-index: 0;
+        }
+
+        .hero-photo {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+            border: var(--border);
+            background: var(--paper);
+        }
+
+        .hero-caption {
+            position: absolute;
+            z-index: 2;
+            bottom: -20px;
+            left: -20px;
+            background: var(--white);
+            border: var(--border);
+            padding: 12px 16px;
+            font-family: "DM Mono", monospace;
+            transform: rotate(-5deg);
+            box-shadow: 5px 5px 0 var(--black);
+        }
+
+
+        /* =========================================================
+           MARQUEE
+        ========================================================= */
+
+        .marquee {
+            overflow: hidden;
+            background: var(--black);
+            color: var(--yellow);
+            border-bottom: var(--border);
+            padding: 18px 0;
+            white-space: nowrap;
+        }
+
+        .marquee-track {
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .marquee-track span {
+            margin: 0 30px;
+        }
+
+        .marquee-track .pink {
+            color: var(--pink);
+        }
+
+        .marquee-track .blue {
+            color: var(--blue);
+        }
+
+        @keyframes marquee {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+
+        /* =========================================================
+           REPORT CARD
+        ========================================================= */
+
+        .report {
+            background: var(--mint);
+        }
+
+        .report-layout {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 70px;
+            align-items: start;
+        }
+
+        .report-intro {
+            position: sticky;
+            top: 40px;
+        }
+
+        .report-intro p {
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 430px;
+        }
+
+        .report-card {
+            background: var(--paper);
+            border: var(--border);
+            padding: 35px;
+            box-shadow: 12px 12px 0 var(--black);
+            transform: rotate(1deg);
+        }
+
+        .report-card-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            gap: 20px;
+            padding-bottom: 25px;
+            border-bottom: 3px dashed var(--black);
+            margin-bottom: 25px;
+        }
+
+        .report-card h3 {
+            font-size: 35px;
+            text-transform: uppercase;
+            line-height: 0.95;
+        }
+
+        .report-card-number {
+            font-family: "DM Mono", monospace;
+            font-size: 13px;
+            background: var(--yellow);
+            border: 2px solid var(--black);
+            padding: 7px;
+        }
+
+        .student-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .info-box {
+            border: 2px solid var(--black);
+            padding: 13px;
+            background: white;
+        }
+
+        .info-label {
+            display: block;
+            font-family: "DM Mono", monospace;
+            font-size: 11px;
+            margin-bottom: 5px;
+        }
+
+        .info-value {
+            font-weight: 700;
+        }
+
+        .grades {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .grade-row {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            gap: 20px;
+            border-bottom: 2px solid var(--black);
+            padding-bottom: 10px;
+        }
+
+        .grade-name {
+            font-weight: 600;
+        }
+
+        .grade {
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .final-grade {
+            margin-top: 30px;
+            background: var(--pink);
+            border: var(--border);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 5px 5px 0 var(--black);
+        }
+
+        .final-grade small {
+            display: block;
+            font-family: "DM Mono", monospace;
+            font-size: 11px;
+            margin-bottom: 5px;
+        }
+
+        .final-grade strong {
+            font-size: clamp(25px, 4vw, 40px);
+            text-transform: uppercase;
+        }
+
+
+        /* =========================================================
+           LETTER
+        ========================================================= */
+
+        .letter {
+            background: var(--white);
+        }
+
+        .letter-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .letter-paper {
+            position: relative;
+            background: var(--paper);
+            border: var(--border);
+            padding: clamp(30px, 6vw, 70px);
+            box-shadow: 14px 14px 0 var(--black);
+        }
+
+        .letter-paper::before {
+            content: "♥";
+            position: absolute;
+            right: 30px;
+            top: 20px;
+            font-size: 45px;
+            color: var(--pink);
+            transform: rotate(12deg);
+        }
+
+        .letter-date {
+            font-family: "DM Mono", monospace;
+            font-size: 13px;
+            margin-bottom: 50px;
+        }
+
+        .letter-greeting {
+            font-size: 34px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        .letter-content p {
+            font-size: 18px;
+            line-height: 1.9;
+            margin-bottom: 22px;
+        }
+
+        .letter-signature {
+            margin-top: 45px;
+            font-size: 25px;
+            font-weight: 700;
+        }
+
+
+        /* =========================================================
+           MEMORIES / SCRAPBOOK
+        ========================================================= */
+
+        .memories {
+            background: var(--blue);
+            border-top: var(--border);
+            border-bottom: var(--border);
+        }
+
+        .memories-header {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            align-items: end;
+            margin-bottom: 60px;
+        }
+
+        .memories-header p {
+            max-width: 350px;
+            line-height: 1.6;
+            font-size: 17px;
+        }
+
+        .scrapbook {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 30px;
+        }
+
+        .polaroid {
+            background: var(--white);
+            border: var(--border);
+            padding: 12px;
+            box-shadow: 9px 9px 0 var(--black);
+            transition: transform 0.25s ease;
+        }
+
+        .polaroid:hover {
+            transform: translateY(-8px) rotate(0deg) !important;
+        }
+
+        .polaroid img {
+            .polaroid img {
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    background: #f5f0df;
+}
+}
+
+        .polaroid-caption {
+            font-family: "DM Mono", monospace;
+            font-size: 13px;
+            margin-top: 13px;
+            min-height: 35px;
+        }
+
+        .photo-1 {
+            grid-column: span 5;
+            transform: rotate(-3deg);
+        }
+
+        .photo-2 {
+            grid-column: span 7;
+            transform: rotate(2deg);
+            margin-top: 50px;
+        }
+
+        .photo-3 {
+            grid-column: span 4;
+            transform: rotate(4deg);
+            margin-top: -20px;
+        }
+
+        .photo-4 {
+            grid-column: span 4;
+            transform: rotate(-2deg);
+        }
+
+        .photo-5 {
+            grid-column: span 4;
+            transform: rotate(3deg);
+            margin-top: 30px;
+        }
+
+        .photo-6 {
+            grid-column: 4 / span 6;
+            transform: rotate(-2deg);
+            margin-top: 30px;
+        }
+
+
+        /* =========================================================
+           LIGHTBOX
+        ========================================================= */
+
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            background: rgba(17, 17, 17, 0.92);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.25s ease;
+        }
+
+        .lightbox.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .lightbox img {
+            width: 100%;
+            max-height: 80vh;
+            object-fit: contain;
+            border: var(--border);
+            background: var(--white);
+        }
+
+        .lightbox-caption {
+            background: var(--yellow);
+            border: var(--border);
+            padding: 15px;
+            margin-top: 10px;
+            font-weight: 700;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: -55px;
+            right: 0;
+            background: var(--pink);
+            border: var(--border);
+            padding: 8px 14px;
+            font-size: 22px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 4px 4px 0 var(--black);
+        }
+
+
+        /* =========================================================
+           APPRECIATION WALL
+        ========================================================= */
+
+        .wall {
+            background: var(--pink);
+        }
+
+        .wall-intro {
+            max-width: 700px;
+            margin-bottom: 60px;
+        }
+
+        .wall-intro p {
+            font-size: 19px;
+            line-height: 1.6;
+        }
+
+        .notes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+
+        .note {
+            border: var(--border);
+            padding: 25px;
+            min-height: 220px;
+            box-shadow: 7px 7px 0 var(--black);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .note:nth-child(1) {
+            background: var(--yellow);
+            transform: rotate(-2deg);
+        }
+
+        .note:nth-child(2) {
+            background: var(--mint);
+            transform: rotate(2deg);
+        }
+
+        .note:nth-child(3) {
+            background: var(--blue);
+            transform: rotate(-1deg);
+        }
+
+        .note:nth-child(4) {
+            background: var(--orange);
+            transform: rotate(2deg);
+        }
+
+        .note:nth-child(5) {
+            background: var(--purple);
+            transform: rotate(-2deg);
+        }
+
+        .note:nth-child(6) {
+            background: var(--yellow);
+            transform: rotate(1deg);
+        }
+
+        .note-message {
+            font-size: 20px;
+            line-height: 1.45;
+            font-weight: 600;
+        }
+
+        .note-author {
+            font-family: "DM Mono", monospace;
+            font-size: 12px;
+            margin-top: 25px;
+        }
+
+        .note-form {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--white);
+            border: var(--border);
+            padding: 30px;
+            box-shadow: 10px 10px 0 var(--black);
+        }
+
+        .note-form h3 {
+            font-size: 30px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+
+        .field {
+            margin-bottom: 18px;
+        }
+
+        .field label {
+            display: block;
+            font-family: "DM Mono", monospace;
+            font-size: 12px;
+            margin-bottom: 7px;
+        }
+
+        .field input,
+        .field textarea {
+            width: 100%;
+            border: 3px solid var(--black);
+            background: var(--paper);
+            padding: 13px;
+            outline: none;
+        }
+
+        .field textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        .field input:focus,
+        .field textarea:focus {
+            box-shadow: 5px 5px 0 var(--blue);
+        }
+
+        .submit-button {
+            background: var(--black);
+            color: var(--white);
+            border: 3px solid var(--black);
+            padding: 14px 20px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 5px 5px 0 var(--blue);
+            transition: transform 0.15s ease;
+        }
+
+        .submit-button:hover {
+            transform: translate(3px, 3px);
+            box-shadow: 2px 2px 0 var(--blue);
+        }
+
+
+        /* =========================================================
+           FINAL MESSAGE
+        ========================================================= */
+
+        .closing {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            background: var(--black);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .closing::before {
+            content: "♥";
+            position: absolute;
+            font-size: 500px;
+            line-height: 1;
+            right: -100px;
+            bottom: -170px;
+            color: var(--pink);
+            opacity: 0.9;
+        }
+
+        .closing-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1000px;
+        }
+
+        .closing-label {
+            display: inline-block;
+            background: var(--yellow);
+            color: var(--black);
+            padding: 9px 14px;
+            font-family: "DM Mono", monospace;
+            margin-bottom: 25px;
+        }
+
+        .closing-title {
+            font-size: clamp(55px, 10vw, 130px);
+            line-height: 0.85;
+            letter-spacing: -6px;
+            text-transform: uppercase;
+        }
+
+        .closing-title .pink {
+            color: var(--pink);
+        }
+
+        .closing-title .blue {
+            color: var(--blue);
+        }
+
+        .closing-message {
+            max-width: 700px;
+            font-size: 21px;
+            line-height: 1.7;
+            margin-top: 40px;
+            color: #eeeeee;
+        }
+
+        .closing-signature {
+            margin-top: 50px;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--yellow);
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+            background: var(--yellow);
+            border-top: var(--border);
+            padding: 25px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            align-items: center;
+            font-family: "DM Mono", monospace;
+            font-size: 12px;
+        }
+
+
+        /* =========================================================
+           SCROLL REVEAL
+        ========================================================= */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition:
+                opacity 0.8s ease,
+                transform 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+        /* =========================================================
+           RESPONSIVE
+        ========================================================= */
+
+        @media (max-width: 900px) {
+
+            .scroll-counter {
+                display: none;
+            }
+
+            .opening-title {
+                letter-spacing: -5px;
+            }
+
+            .hero-grid,
+            .report-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .report-intro {
+                position: static;
+            }
+
+            .hero-photo-wrapper {
+                max-width: 600px;
+                margin: 20px auto 0;
+            }
+
+            .memories-header {
+                display: block;
+            }
+
+            .memories-header p {
+                margin-top: 25px;
+            }
+
+            .notes {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+
+        @media (max-width: 650px) {
+
+            .container {
+                width: min(100% - 28px, 1180px);
+            }
+
+            .section {
+                padding: 80px 0;
+            }
+
+            .opening {
+                min-height: 95vh;
+            }
+
+            .opening::before {
+                width: 100px;
+                height: 100px;
+                right: -20px;
+                top: 10%;
+            }
+
+            .opening::after {
+                width: 80px;
+                height: 80px;
+                left: -25px;
+                bottom: 8%;
+            }
+
+            .opening-title {
+                font-size: clamp(55px, 17vw, 100px);
+                letter-spacing: -5px;
+            }
+
+            .hero-heading {
+                font-size: clamp(50px, 15vw, 80px);
+                letter-spacing: -4px;
+            }
+
+            .hero-text {
+                font-size: 17px;
+            }
+
+            .student-info {
+                grid-template-columns: 1fr;
+            }
+
+            .report-card {
+                padding: 22px;
+                box-shadow: 7px 7px 0 var(--black);
+            }
+
+            .letter-paper {
+                padding: 25px;
+                box-shadow: 7px 7px 0 var(--black);
+            }
+
+            .letter-content p {
+                font-size: 16px;
+                line-height: 1.8;
+            }
+
+            .scrapbook {
+                display: flex;
+                flex-direction: column;
+                gap: 35px;
+            }
+
+            .polaroid {
+                width: 90%;
+                margin: 0 auto !important;
+            }
+
+            .photo-1 {
+                transform: rotate(-3deg);
+            }
+
+            .photo-2 {
+                transform: rotate(2deg);
+            }
+
+            .photo-3 {
+                transform: rotate(3deg);
+            }
+
+            .photo-4 {
+                transform: rotate(-2deg);
+            }
+
+            .photo-5 {
+                transform: rotate(2deg);
+            }
+
+            .photo-6 {
+                transform: rotate(-2deg);
+            }
+
+            .notes {
+                grid-template-columns: 1fr;
+            }
+
+            .note {
+                min-height: 190px;
+            }
+
+            .note-form {
+                padding: 22px;
+            }
+
+            .closing {
+                min-height: 80vh;
+            }
+
+            .closing-title {
+                font-size: clamp(50px, 16vw, 90px);
+                letter-spacing: -4px;
+            }
+
+            .closing-message {
+                font-size: 17px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================================================
+         SCROLL COUNTER
+    ========================================================== -->
+
+    <div class="scroll-counter" id="scrollCounter">
+        01 / 06
+    </div>
+
+
+    <!-- =========================================================
+         OPENING
+    ========================================================== -->
+
+    <section class="opening" data-section="1">
+
+        <div class="container">
+
+            <div class="opening-content">
+
+                <div class="opening-small">
+                    A LITTLE TEACHER'S DAY SURPRISE
+                </div>
+
+                <h1 class="opening-title">
+                    <span>HEY,</span>
+                    <span class="pink">MANANG.</span>
+                    <span class="blue">THIS ONE'S</span>
+                    <span>FOR YOU.</span>
+                </h1>
+
+                <div class="scroll-cue">
+                    <span>SCROLL DOWN</span>
+                    <span class="scroll-arrow">↓</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         HERO
+    ========================================================== -->
+
+    <section class="section hero" data-section="2">
+
+        <div class="container">
+
+            <div class="hero-grid">
+
+                <div class="reveal">
+
+                    <div class="section-label">
+                        01 / TEACHER'S DAY
+                    </div>
+
+                    <h2 class="hero-heading">
+                        HAPPY
+                        <span class="pink">TEACHER'S</span>
+                        <span class="blue">DAY, MANANG!</span>
+                    </h2>
+
+                    <p class="hero-text">
+                        For the teacher who spends her days helping
+                        others learn, grow, and believe in themselves.
+                        Today, we celebrate you.
+                    </p>
+
+                </div>
+
+                <div class="hero-photo-wrapper reveal">
+
+                    <!-- INSERT SISTER PHOTO HERE -->
+                    <img
+                        src="images/sister.jpeg"
+                        alt="Photo of Ate"
+                        class="hero-photo"
+                    >
+
+                    <div class="hero-caption">
+                        THE TEACHER ♥
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         MARQUEE
+    ========================================================== -->
+
+    <div class="marquee">
+
+        <div class="marquee-track">
+
+            <span>TEACH</span>
+            <span class="pink">INSPIRE</span>
+            <span>ENCOURAGE</span>
+            <span class="blue">BELIEVE</span>
+            <span>TEACH</span>
+            <span class="pink">INSPIRE</span>
+            <span>ENCOURAGE</span>
+            <span class="blue">BELIEVE</span>
+
+            <span>TEACH</span>
+            <span class="pink">INSPIRE</span>
+            <span>ENCOURAGE</span>
+            <span class="blue">BELIEVE</span>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         REPORT CARD
+    ========================================================== -->
+
+    <section class="section report" id="report" data-section="3">
+
+        <div class="container">
+
+            <div class="report-layout">
+
+                <div class="report-intro reveal">
+
+                    <div class="section-label">
+                        02 / OFFICIAL RECORD
+                    </div>
+
+                    <h2 class="section-title">
+                        TEACHER'S
+                        <span class="pink">REPORT</span>
+                        CARD
+                    </h2>
+
+                    <p>
+                        Every teacher deserves a report card too.
+                        So today, we're flipping the classroom around
+                        and putting you in the student's seat.
+                    </p>
+
+                </div>
+
+
+                <div class="report-card reveal">
+
+                    <div class="report-card-top">
+
+                        <h3>
+                            Teacher's<br>
+                            Report Card
+                        </h3>
+
+                        <div class="report-card-number">
+                            #MANANG-2026
+                        </div>
+
+                    </div>
+
+
+                    <div class="student-info">
+
+                        <div class="info-box">
+                            <span class="info-label">TEACHER</span>
+                            <span class="info-value">JOHNDAI-ANN L. ADRIMESIN</span>
+                        </div>
+
+                        <div class="info-box">
+                            <span class="info-label">SUBJECT</span>
+                            <span class="info-value">
+                                Being an Awesome Manang
+                            </span>
+                        </div>
+
+                        <div class="info-box">
+                            <span class="info-label">SCHOOL YEAR</span>
+                            <span class="info-value">2026</span>
+                        </div>
+
+                        <div class="info-box">
+                            <span class="info-label">STATUS</span>
+                            <span class="info-value">PASSED ♥</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="grades">
+
+                        <div class="grade-row">
+                            <span class="grade-name">
+                                Patience
+                            </span>
+                            <span class="grade">A+</span>
+                        </div>
+
+                        <div class="grade-row">
+                            <span class="grade-name">
+                                Caring for Students
+                            </span>
+                            <span class="grade">A+</span>
+                        </div>
+
+                        <div class="grade-row">
+                            <span class="grade-name">
+                                Inspiring Others
+                            </span>
+                            <span class="grade">A+</span>
+                        </div>
+
+                        <div class="grade-row">
+                            <span class="grade-name">
+                                Surviving Stressful Days
+                            </span>
+                            <span class="grade">A++</span>
+                        </div>
+
+                        <div class="grade-row">
+                            <span class="grade-name">
+                                Being an Amazing Sister
+                            </span>
+                            <span class="grade">A+</span>
+                        </div>
+
+                        <div class="grade-row">
+                            <span class="grade-name">
+                                Giving Up
+                            </span>
+                            <span class="grade">NEVER</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="final-grade">
+
+                        <small>FINAL GRADE</small>
+
+                        <strong>
+                            Irreplaceable ♥
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         LETTER
+    ========================================================== -->
+
+    <section class="section letter" id="letter" data-section="4">
+
+        <div class="container">
+
+            <div class="letter-wrapper">
+
+                <div class="section-label reveal">
+                    03 / A LETTER FOR YOU
+                </div>
+
+                <div class="letter-paper reveal">
+
+                    <div class="letter-date">
+                        TEACHER'S DAY • 2026
+                    </div>
+
+                    <div class="letter-greeting">
+                        Dear Manang,
+                    </div>
+
+                    <div class="letter-content">
+
+                        <p>
+                            Happy Teacher's Day to one of the most
+                            amazing teachers I know, and most importantly,
+                            to my wonderful sister.
+                        </p>
+
+                        <p>
+                            I know being a teacher is not always easy.
+                            It takes patience, dedication, and a lot of
+                            heart to teach and guide students every day.
+                        </p>
+
+                        <p>
+                            You do more than just teach lessons.
+                            You encourage your students, listen to them,
+                            help them believe in themselves, and leave
+                            a little piece of your kindness in every
+                            student you meet.
+                        </p>
+
+                        <p>
+                            As your sibling, I've seen how much effort
+                            you put into what you do. There are probably
+                            days when you feel tired, stressed, or unsure
+                            if your work is making a difference.
+                        </p>
+
+                        <p>
+                            But I hope you always remember that what
+                            you do matters.
+                        </p>
+
+                        <p>
+                            Sometimes, the smallest words of encouragement
+                            from a teacher can stay with a student for years.
+                        </p>
+
+                        <p>
+                            I'm proud of you not only because you are
+                            a teacher, but because of the kind of person
+                            you are. You deserve to be appreciated not
+                            just today, but every day.
+                        </p>
+
+                        <p>
+                            Thank you for being someone who inspires
+                            others, for being patient even when things
+                            get difficult, and for giving your students
+                            a reason to keep learning and believing
+                            in themselves.
+                        </p>
+
+                        <p>
+                            I hope you continue to inspire, teach,
+                            and touch the lives of many more students.
+                        </p>
+
+                        <p>
+                            And whenever you feel like your efforts
+                            aren't being noticed, remember that there
+                            are people who see how hard you work and
+                            are proud of you.
+                        </p>
+
+                        <p>
+                            Happy Teacher's Day, Manang!
+                        </p>
+
+                        <p>
+                            Keep inspiring. Keep teaching.
+                            Keep being you.
+                        </p>
+
+                    </div>
+
+                    <div class="letter-signature">
+                        With love,<br>
+                        Carlo ♥
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         SCRAPBOOK / MEMORIES
+    ========================================================== -->
+
+    <section class="section memories" id="memories" data-section="5">
+
+        <div class="container">
+
+            <div class="memories-header reveal">
+
+                <div>
+
+                    <div class="section-label">
+                        04 / THE SCRAPBOOK
+                    </div>
+
+                    <h2 class="section-title">
+                        LITTLE
+                        <span class="yellow">MOMENTS.</span>
+                    </h2>
+
+                </div>
+
+                <p>
+                    A few memories, a few pictures, and a lot of
+                    reasons to smile.
+                </p>
+
+            </div>
+
+
+            <div class="scrapbook">
+
+                <!-- INSERT PHOTO 1 HERE -->
+                <div
+                    class="polaroid photo-1 reveal"
+                    data-caption="One of my favorite memories with you."
+                >
+                    <img
+                        src="images/memory1.jpeg"
+                        alt="Memory 1"
+                    >
+
+                    <div class="polaroid-caption">
+                        ONE OF MY FAVORITES ♥
+                    </div>
+                </div>
+
+
+                <!-- INSERT PHOTO 2 HERE -->
+                <div
+                    class="polaroid photo-2 reveal"
+                    data-caption="A moment worth remembering."
+                >
+                    <img
+                        src="images/memory2.jpeg"
+                        alt="Memory 2"
+                    >
+
+                    <div class="polaroid-caption">
+                        REMEMBER THIS?
+                    </div>
+                </div>
+
+
+                <!-- INSERT PHOTO 3 HERE -->
+                <div
+                    class="polaroid photo-3 reveal"
+                    data-caption="Good times with Ate."
+                >
+                    <img
+                        src="images/memory3.jpeg"
+                        alt="Memory 3"
+                    >
+
+                    <div class="polaroid-caption">
+                        GOOD TIMES.
+                    </div>
+                </div>
+
+
+                <!-- INSERT PHOTO 4 HERE -->
+                <div
+                    class="polaroid photo-4 reveal"
+                    data-caption="Just another little moment."
+                >
+                    <img
+                        src="images/slay.jpeg"
+                        alt="Memory 4"
+                    >
+
+                    <div class="polaroid-caption">
+                        SLAY.
+                    </div>
+                </div>
+
+
+                <!-- INSERT PHOTO 5 HERE -->
+                <div
+                    class="polaroid photo-5 reveal"
+                    data-caption="That smile says everything."
+                >
+                    <img
+                        src="images/smile.jpeg"
+                        alt="Memory 5"
+                    >
+
+                    <div class="polaroid-caption">
+                        SMILE :)
+                    </div>
+                </div>
+
+
+                <!-- INSERT PHOTO 6 HERE -->
+                <div
+                    class="polaroid photo-6 reveal"
+                    data-caption="And many more memories to come."
+                >
+                    <img
+                        src="images/memory6.jpeg"
+                        alt="Memory 6"
+                    >
+
+                    <div class="polaroid-caption">
+                        MORE TO COME...
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         LIGHTBOX
+    ========================================================== -->
+
+    <div class="lightbox" id="lightbox">
+
+        <div class="lightbox-content">
+
+            <button
+                class="lightbox-close"
+                id="lightboxClose"
+                aria-label="Close image"
+            >
+                ×
+            </button>
+
+            <img
+                src=""
+                alt=""
+                id="lightboxImage"
+            >
+
+            <div
+                class="lightbox-caption"
+                id="lightboxCaption"
+            ></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         APPRECIATION WALL
+    ========================================================== -->
+
+    <section class="section wall" id="wall" data-section="6">
+
+        <div class="container">
+
+            <div class="wall-intro reveal">
+
+                <div class="section-label">
+                    05 / WALL OF APPRECIATION
+                </div>
+
+                <h2 class="section-title">
+                    WORDS
+                    <span class="blue">FOR</span>
+                    <span class="yellow">YOU.</span>
+                </h2>
+
+                <p>
+                    Because sometimes people need to hear the things
+                    they spend their lives giving to others.
+                </p>
+
+            </div>
+
+
+            <div class="notes" id="notes">
+
+                <div class="note reveal">
+
+                    <div class="note-message">
+                        "Thank you for always believing in your students,
+                        even when they don't believe in themselves yet."
+                    </div>
+                </div>
+
+
+                <div class="note reveal">
+
+                    <div class="note-message">
+                        "You don't just teach subjects.
+                        You teach people how to keep going."
+                    </div>
+                </div>
+
+
+                <div class="note reveal">
+
+                    <div class="note-message">
+                        "Your kindness probably means more to your
+                        students than you realize."
+                    </div>
+                </div>
+
+
+                <div class="note reveal">
+
+                    <div class="note-message">
+                        "The world needs more teachers who genuinely care.
+                        Keep being you."
+                    </div>
+                </div>
+
+
+                <div class="note reveal">
+
+                    <div class="note-message">
+                        "Every lesson you teach becomes a little part
+                        of someone's story."
+                    </div>
+
+                    <div class="note-author">
+                    </div>
+
+                </div>
+
+
+                <div class="note reveal">
+
+                    <div class="note-message">
+                        "You're doing better than you think.
+                        Keep going, Manang."
+                    </div>
+                </div>
+
+            </div>
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         FINAL MESSAGE
+    ========================================================== -->
+
+    <section class="closing" data-section="7">
+
+        <div class="container">
+
+            <div class="closing-content reveal">
+
+                <div class="closing-label">
+                    BEFORE YOU GO...
+                </div>
+
+                <h2 class="closing-title">
+                    YOU'RE NOT
+                    <span class="pink">JUST</span>
+                    A TEACHER.
+                    <span class="blue">
+                        YOU'RE SOMEONE PEOPLE REMEMBER.
+                    </span>
+                </h2>
+
+                <p class="closing-message">
+                    You spend your days telling other people that
+                    they can do great things. So here's someone
+                    reminding you: you can be proud of yourself too.
+                </p>
+
+                <div class="closing-signature">
+                    Happy Teacher's Day, Manang. ♥<br>
+                    — Carlo
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <span>
+                    MADE WITH LOVE ♥
+                </span>
+
+                <span>
+                    TEACHER'S DAY 2026
+                </span>
+
+                <span>
+                    — CARLO
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================== -->
+
+    <script>
+
+        /* =====================================================
+           SCROLL REVEAL
+        ===================================================== */
+
+        const revealElements =
+            document.querySelectorAll(".reveal");
+
+        const revealObserver =
+            new IntersectionObserver(
+                (entries) => {
+
+                    entries.forEach((entry) => {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.classList.add("visible");
+
+                            revealObserver.unobserve(
+                                entry.target
+                            );
+
+                        }
+
+                    });
+
+                },
+                {
+                    threshold: 0.12
+                }
+            );
+
+
+        revealElements.forEach((element) => {
+            revealObserver.observe(element);
+        });
+
+
+        /* =====================================================
+           LIGHTBOX
+        ===================================================== */
+
+        const lightbox =
+            document.getElementById("lightbox");
+
+        const lightboxImage =
+            document.getElementById("lightboxImage");
+
+        const lightboxCaption =
+            document.getElementById("lightboxCaption");
+
+        const lightboxClose =
+            document.getElementById("lightboxClose");
+
+        const polaroids =
+            document.querySelectorAll(".polaroid");
+
+
+        polaroids.forEach((polaroid) => {
+
+            polaroid.addEventListener("click", () => {
+
+                const image =
+                    polaroid.querySelector("img");
+
+                const caption =
+                    polaroid.dataset.caption;
+
+                lightboxImage.src = image.src;
+                lightboxImage.alt = image.alt;
+                lightboxCaption.textContent = caption;
+
+                lightbox.classList.add("active");
+
+                document.body.style.overflow = "hidden";
+
+            });
+
+        });
+
+
+        function closeLightbox() {
+
+            lightbox.classList.remove("active");
+
+            document.body.style.overflow = "";
+
+        }
+
+
+        lightboxClose.addEventListener(
+            "click",
+            closeLightbox
+        );
+
+
+        lightbox.addEventListener(
+            "click",
+            (event) => {
+
+                if (event.target === lightbox) {
+                    closeLightbox();
+                }
+
+            }
+        );
+
+
+        document.addEventListener(
+            "keydown",
+            (event) => {
+
+                if (event.key === "Escape") {
+                    closeLightbox();
+                }
+
+            }
+        );
+
+
+        /* =====================================================
+           APPRECIATION WALL
+        ===================================================== */
+
+        const noteForm =
+            document.getElementById("noteForm");
+
+        const notesContainer =
+            document.getElementById("notes");
+
+
+        function escapeHTML(value) {
+
+            const div =
+                document.createElement("div");
+
+            div.textContent = value;
+
+            return div.innerHTML;
+
+        }
+
+
+        noteForm.addEventListener(
+            "submit",
+            (event) => {
+
+                event.preventDefault();
+
+                const name =
+                    document
+                        .getElementById("noteName")
+                        .value
+                        .trim();
+
+                const message =
+                    document
+                        .getElementById("noteMessage")
+                        .value
+                        .trim();
+
+
+                if (!name || !message) {
+                    return;
+                }
+
+
+                const note =
+                    document.createElement("div");
+
+                note.className = "note";
+
+                note.innerHTML = `
+                    <div class="note-message">
+                        "${escapeHTML(message)}"
+                    </div>
+
+                    <div class="note-author">
+                        — ${escapeHTML(name)}
+                    </div>
+                `;
+
+
+                notesContainer.appendChild(note);
+
+
+                noteForm.reset();
+
+
+                note.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
+
+            }
+        );
+
+
+        /* =====================================================
+           SCROLL COUNTER
+        ===================================================== */
+
+        const scrollCounter =
+            document.getElementById("scrollCounter");
+
+        const sections =
+            document.querySelectorAll("[data-section]");
+
+
+        const sectionObserver =
+            new IntersectionObserver(
+                (entries) => {
+
+                    entries.forEach((entry) => {
+
+                        if (entry.isIntersecting) {
+
+                            const number =
+                                entry.target.dataset.section;
+
+                            scrollCounter.textContent =
+                                String(number).padStart(2, "0")
+                                + " / 07";
+
+                        }
+
+                    });
+
+                },
+                {
+                    threshold: 0.45
+                }
+            );
+
+
+        sections.forEach((section) => {
+            sectionObserver.observe(section);
+        });
+
+    </script>
+
+</body>
+</html>
